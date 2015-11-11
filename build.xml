@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!-- Configuration of the Ant build system to generate a Jar file --> 
+<project name="LADLex" default="BuildAll">
+  <target name="CreateJar" description="Create Jar file">
+  	<antcall target="BuildAll"/>
+        <jar destfile="${basedir}/lib/multilexer.jar">
+        	<fileset dir="${basedir}/bin" includes="uk/ac/rhul/csle/tooling/lexer/**" />
+        	<fileset dir="${basedir}/src" includes="uk/ac/rhul/csle/tooling/lexer/**" />
+        </jar>
+  </target>
+	
+  <target name="BuildAll" description="Generates class files">
+    <javac source="1.8" target="1.8" includeantruntime="false" destdir="${basedir}/bin" srcdir="${basedir}/src" >
+    	<classpath> 
+          <fileset dir="${basedir}"> 
+    		<include name="*.jar" /> 
+          </fileset>  
+    	</classpath> 
+    </javac>
+  </target>
+</project>

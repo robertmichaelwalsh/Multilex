@@ -1,0 +1,327 @@
+CsharpLexer()(input)
+
+input ::= (whitespace | comment | identifier | abstract | as | base | bool | break | byte 
+  | case | catch | char | checked | class | const 
+  | continue | decimal | default | delegate | do 
+  | double | else | enum | event | explicit | extern 
+  | false | finally | fixed | float | for | foreach 
+  | goto | if | implicit | in | int | interface | internal 
+  | is | lock | long | namespace | new | object 
+  | operator | out | override | params | private 
+  | protected | public | readonly | ref | return 
+  | sbyte | sealed | short 
+  //This is part of the unsafe extensions | sizeof 
+  | stackalloc | static | string | struct | switch | this | throw 
+  | true | try | typeof | uint | ulong | unchecked 
+  | unsafe | ushort | using | virtual | void 
+  | volatile | while | method | integer_literal | real_literal | character_literal
+  | string_literal | dot | comma | lparen | rparen
+  | lbracket | rbracket | increment | decrement | new_line | boolean_literal 
+  | add_op | sub_op | not_op | mul_op | div_op | mod_op | or_op | lshift_op | rshift_op | lessthan_op
+  | greaterthan_op | lessthaneq_op |greaterthaneq_op | equality_op | nequality_op | and_op | xor_op | condand_op | condor_op 
+  | question | colon | semicolon | dirassign | addassign
+  | subassign |mulassign | divassign |modassign |andassign |orassign |xorassign |lshiftassign
+  | rshiftassign | lbrace | rbrace | tilde | assembly | module | field | param | property | type
+  | add | remove | get | set | null_literal)*;
+
+add ::= `a`d`d ;
+remove ::= `r`e`m`o`v`e ;
+get ::= `g`e`t ;
+set ::= `s`e`t ;
+assembly ::= `a`s`s`e`m`b`l`y ;
+module ::= `m`o`d`u`l`e ;
+field ::= `f`i`e`l`d ;
+param ::= `p`a`r`a`m ;
+property ::= `p`r`o`p`e`r`t`y ;
+type ::= `t`y`p`e ;
+
+abstract ::= `a`b`s`t`r`a`c`t ;
+as ::= `a`s ;
+base ::= `b`a`s`e ;
+bool ::= `b`o`o`l ;
+break ::= `b`r`e`a`k ;
+byte ::= `b`y`t`e ;
+case ::= `c`a`s`e ;
+catch ::= `c`a`t`c`h ;
+char ::= `c`h`a`r ;
+checked ::= `c`h`e`c`k`e`d ;
+class ::= `c`l`a`s`s ;
+const ::= `c`o`n`s`t ;
+continue ::= `c`o`n`t`i`n`u`e ;
+decimal ::= `d`e`c`i`m`a`l ;
+default ::= `d`e`f`a`u`l`t ;
+delegate ::= `d`e`l`e`g`a`t`e;
+do ::= `d`o ;
+double ::= `d`o`u`b`l`e ;
+else ::= `e`l`s`e ;
+enum ::= `e`n`u`m ;
+event ::= `e`v`e`n`t ;
+explicit ::= `e`x`p`l`i`c`i`t ;
+extern ::= `e`x`t`e`r`n ;
+false ::= `f`a`l`s`e ;
+finally ::= `f`i`n`a`l`l`y ;
+fixed ::= `f`i`x`e`d ;
+float ::= `f`l`o`a`t ;
+for ::= `f`o`r ;
+foreach ::= `f`o`r`e`a`c`h ;
+goto ::= `g`o`t`o ;
+if ::= `i`f ;
+implicit ::= `i`m`p`l`i`c`i`t ;
+in ::= `i`n ;
+int ::= `i`n`t ;
+interface ::= `i`n`t`e`r`f`a`c`e ;
+internal ::= `i`n`t`e`r`n`a`l ;
+is ::= `i`s ;
+lock ::= `l`o`c`k ;
+long ::= `l`o`n`g ;
+namespace ::= `n`a`m`e`s`p`a`c`e ;
+new ::= `n`e`w ;
+object ::= `o`b`j`e`c`t ;
+operator ::= `o`p`e`r`a`t`o`r ;
+out ::= `o`u`t ;
+override ::= `o`v`e`r`r`i`d`e ;
+params ::= `p`a`r`a`m`s ;
+private ::= `p`r`i`v`a`t`e ;
+protected ::= `p`r`o`t`e`c`t`e`d ;
+public ::= `p`u`b`l`i`c ;
+readonly ::= `r`e`a`d`o`n`l`y ;
+ref ::= `r`e`f ;
+return ::= `r`e`t`u`r`n ;
+sbyte ::= `s`b`y`t`e ;
+sealed ::= `s`e`a`l`e`d ;
+short ::= `s`h`o`r`t ;
+sizeof ::= `s`i`z`e`o`f ;
+stackalloc ::= `s`t`a`c`k`a`l`l`o`c ;
+static ::= `s`t`a`t`i`c ;
+string ::= `s`t`r`i`n`g ;
+struct ::= `s`t`r`u`c`t ;
+switch ::= `s`w`i`t`c`h ;
+this ::= `t`h`i`s ;
+throw ::= `t`h`r`o`w ;
+true ::= `t`r`u`e ;
+try ::= `t`r`y ;
+typeof ::= `t`y`p`e`o`f ;
+uint ::= `u`i`n`t ;
+ulong ::= `u`l`o`n`g ;
+unchecked ::= `u`n`c`h`e`c`k`e`d ;
+unsafe ::= `u`n`s`a`f`e ;
+ushort ::= `u`s`h`o`r`t ;
+using ::= `u`s`i`n`g ;
+virtual ::= `v`i`r`t`u`a`l ;
+void ::= `v`o`i`d ;
+volatile ::=`v`o`l`a`t`i`l`e ;
+while ::= `w`h`i`l`e ;
+method ::= `m`e`t`h`o`d ;
+
+new_line ::= `\r | `\n | `\r`\n ;
+
+whitespace ::= `  | `\t | `\v | `\f ;
+
+comment ::= `/`/ input_character* | `/`* (not_asterisk | `*+ not_slash)* `*+ `/ ;
+
+input_character ::=
+  `\0 | `\a | `\b | `\t | `\v | `\f | `\e | `  | `! | `" | `# | `$ | `% | `& 
+  | `' | `( | `) | `* | `+ | `, | `- | `. | `/ | `0 | `1 | `2 | `3 | `4 | `5
+  | `6 | `7 | `8 | `9 | `: | `; | `< | `= | `> | `? | `@ | `A | `B | `C | `D
+  | `E | `F | `G | `H | `I | `J | `K | `L | `M | `N | `O | `P | `Q | `R | `S
+  | `T | `U | `V | `W | `X | `Y | `Z | `[ | `\\ | `] | `^ | `_ | `` | `a | `b
+  | `c | `d | `e | `f | `g | `h | `i | `j | `k | `l | `m | `n | `o | `p | `q 
+  | `r | `s | `t | `u | `v | `w | `x | `y | `z | `{ | `| | `} | `~ ;
+  
+new_line_character ::= `\r | `\n ;
+
+not_asterisk ::= 
+  `\0 | `\a | `\b | `\t | `\v | `\f | `\e | `  | `! | `" | `# | `$ | `% | `& 
+  | `' | `( | `) | `\r | `\n | `+ | `, | `- | `. | `/ | `0 | `1 | `2 | `3 | `4 | `5
+  | `6 | `7 | `8 | `9 | `: | `; | `< | `= | `> | `? | `@ | `A | `B | `C | `D
+  | `E | `F | `G | `H | `I | `J | `K | `L | `M | `N | `O | `P | `Q | `R | `S
+  | `T | `U | `V | `W | `X | `Y | `Z | `[ | `\\ | `] | `^ | `_ | `` | `a | `b
+  | `c | `d | `e | `f | `g | `h | `i | `j | `k | `l | `m | `n | `o | `p | `q 
+  | `r | `s | `t | `u | `v | `w | `x | `y | `z | `{ | `| | `} | `~ ;
+  
+not_slash ::=
+  `\0 | `\a | `\b | `\t | `\v | `\f | `\e | `  | `! | `" | `# | `$ | `% | `& 
+  | `' | `( | `) | `\r | `\n | `+ | `, | `- | `. | `* | `0 | `1 | `2 | `3 | `4 | `5
+  | `6 | `7 | `8 | `9 | `: | `; | `< | `= | `> | `? | `@ | `A | `B | `C | `D
+  | `E | `F | `G | `H | `I | `J | `K | `L | `M | `N | `O | `P | `Q | `R | `S
+  | `T | `U | `V | `W | `X | `Y | `Z | `[ | `\\ | `] | `^ | `_ | `` | `a | `b
+  | `c | `d | `e | `f | `g | `h | `i | `j | `k | `l | `m | `n | `o | `p | `q 
+  | `r | `s | `t | `u | `v | `w | `x | `y | `z | `{ | `| | `} | `~ ;
+  
+unicode_character_escape_sequence ::=
+  `\\`u hex_digit hex_digit hex_digit hex_digit
+  | `\\`U hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit ;
+  
+identifier ::= (letter_character | `_) identifier_part_character* | `@ (letter_character | `_) identifier_part_character* ;
+
+// Can I filter keywords?
+
+letter_character ::= 
+  `A | `B | `C | `D | `E | `F | `G | `H | `I | `J | `K | `L | `M | `N | `O | `P 
+  | `Q | `R | `S | `T | `U | `V | `W | `X | `Y | `Z | `a | `b | `c | `d | `e 
+  | `f | `g | `h | `i | `j | `k | `l | `m | `n | `o | `p | `q | `r | `s | `t 
+  | `u | `v | `w | `x | `y | `z ;
+  
+identifier_part_character ::= 
+  `A | `B | `C | `D | `E | `F | `G | `H | `I | `J | `K | `L | `M | `N | `O | `P 
+  | `Q | `R | `S | `T | `U | `V | `W | `X | `Y | `Z | `a | `b | `c | `d | `e 
+  | `f | `g | `h | `i | `j | `k | `l | `m | `n | `o | `p | `q | `r | `s | `t 
+  | `u | `v | `w | `x | `y | `z | `0 | `1 | `2 | `3 | `4 | `5 | `6 | `7 | `8 
+  | `9 | `_ | unicode_character_escape_sequence;
+
+boolean_literal ::= `t`r`u`e | `f`a`l`s`e ;
+
+integer_literal ::= decimal_digit+ integer_type_suffix? | `0`x hex_digit+ integer_type_suffix?
+  | `0`X hex_digit+ integer_type_suffix? ;
+
+decimal_digit ::= `0 | `1 | `2 | `3 | `4 | `5 | `6 | `7 | `8 | `9 ;
+
+integer_type_suffix ::= `U | `u | `L | `l | `U`L | `U`l | `u`L | `u`l | `L`U | `L`u
+  | `l`U | `l`u ;
+  
+hex_digit ::=
+  `0 | `1 | `2 | `3 | `4 | `5 | `6 | `7 | `8 | `9 | `A | `B | `C | `D | `E | `F
+  | `a | `b | `c | `d | `e | `f ;
+  
+real_literal ::= decimal_digit+ `. decimal_digit+ exponent_part? real_type_suffix?
+  | `. decimal_digit+ exponent_part? real_type_suffix?
+  | decimal_digit+ exponent_part real_type_suffix?
+  | decimal_digit+ real_type_suffix ;
+  
+exponent_part ::=
+  `e (`+ | `-)? decimal_digit+
+  | `E (`+ | `-)? decimal_digit+ ;
+
+real_type_suffix ::= `F | `f | `D | `d | `M | `m ;
+
+character_literal ::= `' character `' ;
+
+character ::= single_character | simple_escape_sequence | hexadecimal_escape_sequence
+  | unicode_character_escape_sequence ;
+  
+single_character ::=  `\0 | `\a | `\b | `\t | `\v | `\f | `\e | `  | `! | `" | `# | `$ | `% | `& 
+  | `( | `) | `* | `+ | `, | `- | `. | `/ | `0 | `1 | `2 | `3 | `4 | `5
+  | `6 | `7 | `8 | `9 | `: | `; | `< | `= | `> | `? | `@ | `A | `B | `C | `D
+  | `E | `F | `G | `H | `I | `J | `K | `L | `M | `N | `O | `P | `Q | `R | `S
+  | `T | `U | `V | `W | `X | `Y | `Z | `[ | `] | `^ | `_ | `` | `a | `b
+  | `c | `d | `e | `f | `g | `h | `i | `j | `k | `l | `m | `n | `o | `p | `q 
+  | `r | `s | `t | `u | `v | `w | `x | `y | `z | `{ | `| | `} | `~ ;
+
+simple_escape_sequence ::= `\\`' | `\\ `" | `\\`\\ | `\\`0 | `\\`a | `\\`b | `\\`f 
+  | `\\`n | `\\`r | `\\`t | `\\`v ;
+  
+hexadecimal_escape_sequence ::= `\\`x hex_digit hex_digit? hex_digit? hex_digit? ;
+
+string_literal ::= `" regular_string_literal_character* `" | `@ `" (single_verbatim_string_literal_character | `" `")* `" ;
+
+regular_string_literal_character ::= single_regular_string_literal_character
+  | simple_escape_sequence
+  | hexadecimal_escape_sequence
+  | unicode_character_escape_sequence;
+  
+single_regular_string_literal_character ::=
+  `\0 | `\a | `\b | `\t | `\v | `\f | `\e | `  | `! | `# | `$ | `% | `& 
+  | `' | `( | `) | `* | `+ | `, | `- | `. | `/ | `0 | `1 | `2 | `3 | `4 | `5
+  | `6 | `7 | `8 | `9 | `: | `; | `< | `= | `> | `? | `@ | `A | `B | `C | `D
+  | `E | `F | `G | `H | `I | `J | `K | `L | `M | `N | `O | `P | `Q | `R | `S
+  | `T | `U | `V | `W | `X | `Y | `Z | `[ | `] | `^ | `_ | `` | `a | `b
+  | `c | `d | `e | `f | `g | `h | `i | `j | `k | `l | `m | `n | `o | `p | `q 
+  | `r | `s | `t | `u | `v | `w | `x | `y | `z | `{ | `| | `} | `~ ;
+  
+single_verbatim_string_literal_character ::=
+  `\0 | `\a | `\b | `\t | `\v | `\f | `\e | `  | `! | `# | `$ | `% | `& 
+  | `' | `( | `) | `* | `+ | `, | `- | `. | `/ | `0 | `1 | `2 | `3 | `4 | `5
+  | `6 | `7 | `8 | `9 | `: | `; | `< | `= | `> | `? | `@ | `A | `B | `C | `D
+  | `E | `F | `G | `H | `I | `J | `K | `L | `M | `N | `O | `P | `Q | `R | `S
+  | `T | `U | `V | `W | `X | `Y | `Z | `[ | `\\ | `] | `^ | `_ | `` | `a | `b
+  | `c | `d | `e | `f | `g | `h | `i | `j | `k | `l | `m | `n | `o | `p | `q 
+  | `r | `s | `t | `u | `v | `w | `x | `y | `z | `{ | `| | `} | `~ | `\n | `\r ;
+
+null_literal ::= `n`u`l`l;
+
+lessthan_op ::= `< ;
+
+greaterthan_op ::= `> ;
+
+lessthaneq_op ::= `<`= ;
+
+greaterthaneq_op ::= `>`= ;
+
+equality_op ::= `=`=;
+nequality_op ::= `!`= ;
+
+add_op ::= `+ ;
+
+sub_op ::= `- ;
+
+mul_op ::= `*  ;
+
+div_op ::= `/ ;
+
+mod_op ::= `% ;
+
+and_op ::= `& ;
+
+xor_op ::= `^ ;
+
+or_op ::= `| ;
+
+lshift_op ::= `<`< ;
+
+rshift_op ::=  `>`> ;
+
+condand_op ::= `&`& ;
+
+condor_op ::= `|`| ;
+
+not_op ::= `! ;
+
+tilde ::= `~ ;
+
+dot ::= `. ;
+
+comma ::= `, ;
+
+lparen ::= `( ;
+
+rparen ::= `) ;
+
+lbracket ::= `[ ;
+
+rbracket ::= `] ;
+
+lbrace ::= `{ ;
+
+rbrace ::= `} ;
+
+increment ::= `+`+ ;
+
+decrement ::= `-`- ;
+
+question ::= `? ;
+
+colon ::= `: ;
+
+semicolon ::= `; ;
+
+dirassign ::= `= ;
+
+addassign ::= `+`= ;
+
+subassign ::= `-`= ;
+
+mulassign ::= `*`= ;
+
+divassign ::= `/`= ;
+
+modassign ::= `%`= ;
+
+andassign ::= `&`= ;
+
+orassign ::= `|`= ;
+
+xorassign ::= `^`= ;
+
+lshiftassign ::= `<`<`= ;
+
+rshiftassign ::= `>`>`= ;
