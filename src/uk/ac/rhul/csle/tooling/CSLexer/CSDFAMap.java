@@ -30,10 +30,6 @@ public class CSDFAMap extends BasicDFAMap {
     /**
      * The full list of tokens in C# 1.2
      * <p>
-     * (Note: It is unclear in the specification whether true and false should
-     * be considered as keywords separate from boolean_literal. In this
-     * implementation, they are and are always suppressed in favour of
-     * boolean_literal.)
      */
     TOKENS = new String[] { "whitespace", "comment", "identifier", "abstract", "as", "base", "bool", "break", "byte",
             "case", "catch", "char", "checked", "class", "const", "continue", "decimal", "default", "delegate", "do",
@@ -57,26 +53,6 @@ public class CSDFAMap extends BasicDFAMap {
      * The set of tokens in C# 1.2 which correspond to a single lexeme
      */
     keywords = Arrays.stream(TOKENS).collect(Collectors.toSet());
-
-    /*
-     * boolean_literal : 't' 'r' 'u' 'e' | 'f' 'a' 'l' 's' 'e'
-     */
-    final DFA b_l = new DFA(10);
-
-    b_l.addTransition(0, 1, 't');
-    b_l.addTransition(1, 3, 'r');
-    b_l.addTransition(3, 5, 'u');
-    b_l.addTransition(5, 7, 'e');
-    b_l.addTransition(0, 2, 'f');
-    b_l.addTransition(2, 4, 'a');
-    b_l.addTransition(4, 6, 'l');
-    b_l.addTransition(6, 8, 's');
-    b_l.addTransition(8, 9, 'e');
-    b_l.addAcceptingState(7);
-    b_l.addAcceptingState(9);
-
-    DFAMap.put("boolean_literal", b_l);
-    keywords.remove("boolean_literal");
 
     /*
      * character_literal : '\'' [any unicode character] '\''

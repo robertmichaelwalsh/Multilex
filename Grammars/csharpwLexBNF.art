@@ -716,12 +716,12 @@ labeled_statement ::=
    'identifier' ':' statement ;
 
 literal ::=
-   'boolean_literal' |
+   'false' | 'true' |
    'integer_literal' |
    'real_literal' |
    'character_literal' |
    'string_literal' |
-   'null' ;
+   'null_literal' ;
 
 local_constant_declaration ::=
    'const' type constant_declarators ;

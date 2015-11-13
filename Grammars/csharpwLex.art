@@ -835,7 +835,7 @@ named_argument                      ::= 'identifier' '=' attribute_argument_expr
 
 attribute_argument_expression       ::= expression ; 
 
-literal                             ::= 'boolean_literal' |
+literal                             ::= 'false' | 'true' |
                                      'integer_literal' |
                                      'real_literal' |
                                      'character_literal' |
