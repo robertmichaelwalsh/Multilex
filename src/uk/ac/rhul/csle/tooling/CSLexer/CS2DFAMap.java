@@ -38,10 +38,10 @@ public class CS2DFAMap extends BasicDFAMap {
             "public", "readonly", "ref", "return", "sbyte", "sealed", "short", "sizeof", "stackalloc", "static",
             "string", "struct", "switch", "this", "throw", "true", "try", "typeof", "uint", "ulong", "unchecked",
             "unsafe", "ushort", "using", "virtual", "void", "volatile", "while", "integer_literal", "real_literal",
-            "character_literal", "string_literal", ".", ",", "(", ")", "[", "]", "++", "--", "new_line",
-            "boolean_literal", "+", "-", "!", "*", "/", "%", "->", "|", "<<", ">>", "<", ">", "<=", ">=", "==", "!=",
-            "&", "^", "&&", "||", "?", "??", ":", "::", ";", "=", "+=", "-=", "*=", "/=", "%=", "&=", "|=", "^=", "<<=",
-            ">>=", "{", "}", "~", "yield", "alias", "partial", "get", "set", "add", "remove", "where" };
+            "character_literal", "string_literal", ".", ",", "(", ")", "[", "]", "++", "--", "new_line", "+", "-", "!",
+            "*", "/", "%", "->", "|", "<<", ">>", "<", ">", "<=", ">=", "==", "!=", "&", "^", "&&", "||", "?", "??",
+            ":", "::", ";", "=", "+=", "-=", "*=", "/=", "%=", "&=", "|=", "^=", "<<=", ">>=", "{", "}", "~", "yield",
+            "alias", "partial", "get", "set", "add", "remove", "where" };
 
     /**
      * The list of tokens in C# 2.0 that correspond to layout (or whitespace)
